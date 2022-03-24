@@ -8,6 +8,9 @@ const wins = document.getElementById('win')
 let result = 0
 let squaresLength = squares.length
 let hitPosition
+let currentTime = 10
+let timerId = null
+
 
 function randomSquare() {
 
@@ -33,7 +36,21 @@ squares.forEach(square => {square.addEventListener('mousedown', () => {
 
 
 function moveMole() {
-    let timerId = null
     timerId = setInterval(randomSquare,1000)
 }
 moveMole() 
+
+function countDown() {
+    currentTime--           
+    timeLeft.textContent = currentTime
+
+    if (currentTime == 0) {
+        clearInterval(countDownTimerId)
+        clearInterval(timerId)
+        alert('Game Over your final score is' + '' + result)
+    }
+}
+
+let countDownTimerId = setInterval(countDown,1000)
+
+ 

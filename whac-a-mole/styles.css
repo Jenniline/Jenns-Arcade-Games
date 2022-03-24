@@ -13,5 +13,7 @@
 }
 
 .mole{
-    background-color: blue;
+    background-image: url('/home/jenniline/Jenn-Arcade-Games/whac-a-mole/images/mole.jpg');
+    background-size: cover;
+
 }
