@@ -22,3 +22,15 @@ items.forEach((item) => {
    copyItems.push(item)
 })
 
+//learning appendChild and createTextNode methods in JavaScript
+function addListItem(list) {
+   // create and li. Which is a list item in HTML
+   const node = document.createElement('li')
+   // create a node with string water
+   const textNode = document.createTextNode(list)
+   //now append the newly created node to the list item
+   node.appendChild(textNode)
+   //now put the newly created node in the HTML list of items 
+   document.getElementById("myList").appendChild(node)
+}
+
