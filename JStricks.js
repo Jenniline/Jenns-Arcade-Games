@@ -34,3 +34,6 @@ function addListItem(list) {
    document.getElementById("myList").appendChild(node)
 }
 
+
+console.log('JavaScript Conditional Operator')
+
