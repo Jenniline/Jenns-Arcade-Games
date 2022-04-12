@@ -9,18 +9,19 @@ let forEachCopyItems = " "
 //Converting a for loop to a forEach loop
 
 //before
-for (let i = 0; i < items.length; i++) {
-   copyItems.push(items[i])
-    // console.log('The result of copyitems Array is' + copyItems[i]);
+for (let  i = 0; i < items.length; i++) {
+   copyItemsResult.push(items[i]);
+   
 }
 
+
 //after
+items.forEach((item) => { 
+   copyItems.push(item);
+});
+   
 
-items.forEach((item) => console.log(item))
 
-items.forEach((item) => {
-   copyItems.push(item)
-})
 
 //learning appendChild and createTextNode methods in JavaScript
 function addListItem(list) {
